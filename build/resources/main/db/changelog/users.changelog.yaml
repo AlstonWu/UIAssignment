@@ -1,0 +1,35 @@
+databaseChangeLog:
+  - changeSet:
+      id: users-1
+      author: alston.wu
+      comment: "Initial table of Users"
+      changes:
+        - createTable:
+            tableName: users
+            columns:
+              - column:
+                  name: acct
+                  type: varchar(255)
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: pwd
+                  type: varchar(255)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: fullname
+                  type: varchar(255)
+                  constraints:
+                    nullable: true
+              - column:
+                  name: created_at
+                  type: datetime
+                  constraints:
+                    nullable: false
+              - column:
+                  name: updated_at
+                  type: datetime
+                  constraints:
+                    nullable: true
